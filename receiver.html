@@ -1,0 +1,97 @@
+
+<html>
+   <head>
+
+      <title>receiver</title>
+<style>
+body {
+ background: url(https://img.freepik.com/free-vector/human-blood-donate-white-background_1308-111266.jpg) no-repeat;
+   background-size: 100% 100%;
+  font-family: Arial, Helvetica, sans-serif
+  
+}
+
+.login{
+  width: 350px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+ transform: translate(-50%,-50%);
+}
+.registerbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  width: 30%;
+  
+}
+
+
+</style>
+    <script language="javascript" type="text/javascript">
+function validation1()
+{
+
+
+    	 if(document.form1.name.value=="")
+		{
+		alert("Enter  Name")
+		document.form1.name.focus()
+		return false
+		}
+       
+	if(document.form1.add.value=="")
+		{
+		alert("Enter Address")
+		document.form1.add.focus()
+		return false
+		}
+	
+     
+if(document.form1.phoneno.value=="" || isNaN(document.form1.phoneno.value) || document.form1.phoneno.value.length!=10  )
+	{
+	alert("Enter Mob No")
+	document.form1.phoneno.focus()
+	return false
+	} 
+}
+	
+
+function show1()
+{
+
+window.open("thank.html");
+}
+  </script>
+   </head>
+   <body>
+    <center>
+     <form action="" name="form1" method="POST" onsubmit="return validation1()" >
+   <div class="login">
+     <b><h1>Receiver Form</h1></b>
+      
+
+  
+<br>
+   Name:
+    <input type="text"  name="name" placeholder="Your name.."><br><br>
+
+   Address:
+     <input type="text"  name="add" placeholder="Your Address.."><br><br>
+ 
+    Mobile NO:   
+     <input type="text"  name="phoneno" placeholder="Your Mobile No."><br><br>
+
+    Blood Group:
+    <input type="text" placeholder="Blood Group" name="bg"><br><br>
+
+   Quantity of blood:
+    <input type="text"  placeholder="in millilitre" name="quan"><br><br>
+    
+   <h3> <button type="submit" class="registerbtn" onclick="show1()" >Submit</button><h3>
+ 
+  </center>
+    </form>
+</div>
+   </body>
+</html>

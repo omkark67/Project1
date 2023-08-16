@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+body {background-color:orange;}
+</style>
+<script language="Javascript">MyBanners=new Array('https://cdn3d.iconscout.com/3d/premium/thumb/blood-donation-bag-8543810-6742149.png','https://hips.hearstapps.com/hmg-prod/images/can-i-give-blood-17-things-every-woman-needs-to-know-about-giving-blood-1624616216.png?crop=1.00xw:1.00xh;0,0&resize=1200:*')
+banner=0
+function ShowBanners()
+{ if (document.images)
+{ banner++
+if (banner==MyBanners.length) {
+banner=0}
+document.ChangeBanner.src=MyBanners[banner]
+setTimeout("ShowBanners()",1000)
+}
+}
+</script>
+</head>
+<form>
+<body onload="ShowBanners()">
+<center>
+<img src="https://static.javatpoint.com/blog/images/advantages-and-disadvantages-of-blood-donation.png" width="300" height="200" name="ChangeBanner"/>
+</center>
+
+<h1><b>Blood Bank Form</b></h1>
+
+<br>
+<a href = "donate.html" target ="f3"> Donater Form</a><br><br>
+<a href = "receiver.html" target ="f3"> Receiver Form</a><br><br>
+<a href = "contact.html" target ="f3"> Contact Form</a><br><br>
+
+</form>
+</body>
+</html>

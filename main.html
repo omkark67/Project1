@@ -1,0 +1,127 @@
+<html>
+<head>
+<style>
+body {
+  background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrCHho4cGj6toxuMBQWR801I4TlW4YnA7yWQ&usqp=CAU) no-repeat;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+.registerbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  width: 50%;
+ }
+.signin {
+    text-align: center;
+}
+</style>
+    <script language="javascript" type="text/javascript">
+function validation1()
+{
+ if(document.form1.name.value=="")		
+{
+	alert("Enter  Name")
+		document.form1.name.focus()
+		return false
+		}
+      if(document.form1.add.value=="")
+{
+		alert("Enter Address")
+		document.form1.add.focus()
+		return false
+		}
+	  if(document.form1.city.value=="")
+		{
+		alert("Enter  city")
+		document.form1.city.focus()
+		return false
+		}
+     
+if(document.form1.phoneno.value=="" || isNaN(document.form1.phoneno.value) || document.form1.phoneno.value.length!=10  )
+{
+	alert("Enter Mob No")
+	document.form1.phoneno.focus()
+	return false
+} 
+	if(document.form1.pincode.value=="" || document.form1.pincode.value.length!=6 )
+{
+	alert("Enter Pincode")
+	document.form1.pincode.focus()
+	return false
+} 
+var email = document.form1.mailid.value;
+	atpos = email.indexOf("@");
+	dotpos = email.lastIndexOf(".");
+	
+	if (email == "" || atpos < 1 || ( dotpos - atpos < 2 )) 
+	{
+	alert("Please enter correct email ID")
+	document.form1.mailid.focus() ;
+	return false;
+	}
+ if(document.form1.psw.value=="")
+     {
+      alert("Please enter correct password")
+	document.form1.psw.focus() ;
+	return false;
+    }
+         if(document.form1.ConfirmPass.value!=document.form1.psw.value || document.form1.ConfirmPass.value=="")
+         {
+           alert("Please enter correct password")
+	document.form1.ConfirmPass.focus() ;
+	return false;
+ }
+     Else
+{ 
+alert(" Registered successfully!")
+		return true
+		}
+	 
+}
+function show()
+{
+
+window.open("login.html");
+}
+  </script>
+   </head>
+   <body>
+    <center>
+     <form action="" name="form1" method="POST" onsubmit="return validation1()" >
+   
+     <b><h1>Register</h1>
+      <h2>Blood bank Management</h2>
+
+  
+<br>
+   Name:
+    <input type="text"  name="name" placeholder="Your name.."><br><br>
+
+   Address:
+     <input type="text"  name="add" placeholder="Your Address.."><br><br>
+  City:
+    
+     <input type="text"  name="city" placeholder="Your City."><br><br>
+Pin-Code:     <input type="text"  name="pincode" placeholder="Your Pincode."><br><br>
+
+
+  Email:
+   
+     <input type="text"  name="mailid" placeholder="Your Email."><br><br>
+
+    Mobile NO:   
+     <input type="text"  name="phoneno" placeholder="Your Mobile No."><br><br>
+
+    Password
+    <input type="password" placeholder="Enter Password" name="psw"><br><br>
+
+    Repeat Password
+    <input type="password" placeholder="Repeat Password" name="ConfirmPass"><br><br>
+
+   <h3> <button type="submit" class="registerbtn" onclick="show()" >Register</button><h3>
+ <div class="signin"> <p>Already you registered? <a href="login.html">Sign in</a>.</p></div>
+  </center>
+    </form>
+   </body>
+</html>

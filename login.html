@@ -1,0 +1,55 @@
+<html>
+<head> 
+<style>
+body {
+  background: url(https://static.vecteezy.com/system/resources/previews/008/191/708/original/human-blood-donate-and-heart-rate-on-white-background-free-vector.jpg) no-repeat;
+   background-size: 100% 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.login{
+  width: 280px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+ transform: translate(-50%,-50%);
+}
+</style>
+<script>
+function login1()
+{
+ if(document.form1.txt1.value!="tyco")
+  {
+    alert("Please enter correct username")
+	document.form1.txt1.focus() ;
+	return false;
+  }
+
+ if(document.form1.txt2.value!="1234")
+  {
+    alert("Please enter correct password")
+	document.form1.txt2.focus() ;
+	return false;
+  }
+
+      alert(" Login successfully!")
+  
+ 
+
+}
+</script>
+</head>
+<body>
+<form name="form1"  onsubmit="return login1()" action="pro3.html">
+<center>
+<div class="login">
+<h1><b>Login</b></h1>
+
+Username:<input type="text" name="txt1"><br><br>
+Password:<input type="Password" name="txt2"><br><br>
+<input type="submit" value="Login" name="b1">
+</div>
+</center>
+</form>
+</body>
+<html>
