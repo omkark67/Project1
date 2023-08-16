@@ -1,5 +1,5 @@
 # Project1
-Blood Bank System using html
+Blood Bank Management System using html
 
 The process of managing the blood bag that is received from the blood donation events needs a proper and systematic management.
 The blood bag must be handled with care and treated thoroughly as it is related to someone’s life.
